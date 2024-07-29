@@ -29,9 +29,9 @@ body {
     translate: -50% -50%;
     background-image: conic-gradient(from var(--angle), transparent 60%, blue);
     border-radius: 0 0 10px 10px;
-    /* padding: 3px; */
+    padding: 2px;
     z-index: -1;
-    animation: 30s linear infinite spin;
+    animation: 15s linear infinite spin;
 }
 .headerMain::before{
     filter: blur(1.5rem);
@@ -109,9 +109,9 @@ body {
     translate: -50% -50%;
     background-image: conic-gradient(from var(--angle), transparent 60%, blue);
     border-radius: 10px;
-    /* padding: 3px; */
+    padding: 1px;
     z-index: -1;
-    animation: 60s linear 1s infinite spin;
+    animation: 30s linear 1s infinite spin;
 }
 .aboutMe::before{
     filter: blur(1.5rem);
@@ -132,7 +132,7 @@ body {
 .aboutMeContainer h2{
     font-size: 38px;
     color: rgba(0, 0, 255, .4);
-    margin-top: 0;
+    margin: 0;
 }
 .aboutMeContainer p{
     font-size: 19px;
