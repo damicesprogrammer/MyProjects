@@ -1,0 +1,213 @@
+:root{
+    --primaryColor : #0e141b;
+    --margin-top: 100px
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: auto;
+    background-color: var(--primaryColor);
+    /* background-color: red; */
+    width: 80%;
+    color: white;
+}
+.falseBody .headerMain{
+    position: relative;
+    background-color: var(--primaryColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+}
+.falseBody .headerMain::after, .falseBody .headerMain::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    translate: -50% -50%;
+    background-image: conic-gradient(from var(--angle), transparent 60%, blue);
+    border-radius: 0 0 10px 10px;
+    /* padding: 3px; */
+    z-index: -1;
+    animation: 30s linear infinite spin;
+}
+.headerMain::before{
+    filter: blur(1.5rem);
+}
+.logoMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.logoMain img{
+    width: 50px;
+    border-radius: 50%;
+    padding-left: 1rem;
+}
+.logoMain p a{
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    transition: color .2s
+}
+.logoMain p a:hover{
+    color: blue;
+}
+.logoMain i{
+    color: blue;
+}
+.navLinks ul{
+    margin-right: 1rem;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+.navLinks ul li{
+    position: relative;
+    padding: 1rem;
+    transition: .1s color ;
+}
+.navLinks ul li:hover{
+    cursor: pointer;
+}
+.navLinks ul li:hover a{
+    color: blue;
+}
+.navLinks ul li:hover::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    top: 100%;
+    left: 0%;
+    background-color: grey;
+    animation: .1s navAnimation both linear;
+}
+.navLinks ul li a{
+    text-decoration: none;
+    color: white;
+}
+.aboutMe{
+    margin-top: var(--margin-top);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+}
+.aboutMe::after, .aboutMe::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    translate: -50% -50%;
+    background-image: conic-gradient(from var(--angle), transparent 60%, blue);
+    border-radius: 10px;
+    /* padding: 3px; */
+    z-index: -1;
+    animation: 60s linear 1s infinite spin;
+}
+.aboutMe::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+.aboutMeContainer{
+    width: 90%;
+    margin: auto;
+}
+.aboutMeContainer h1{
+    font-size: 24px;
+    margin-bottom: 0;
+}
+.aboutMeContainer h1{
+    font-size: 26px;
+    color: blue;
+}
+.aboutMeContainer h2{
+    font-size: 38px;
+    color: rgba(0, 0, 255, .4);
+    margin-top: 0;
+}
+.aboutMeContainer p{
+    font-size: 19px;
+}
+.myProjects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--margin-top);
+    border-radius: 10px;
+}
+.myProjects .cardsContainer{
+    display: flex;
+    gap: 2rem;
+    flex-basis: 0;
+    width: 80%;
+    margin: auto;
+    color: white;
+    /* background-color: white; */
+}
+.myProjects .cardsContainer .card{
+    position: relative;
+    background-color: var(--primaryColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    transition: .2s transform, .2s background-color;
+    color: rgba(255,255,255,.7);
+}
+.myProjects .cardsContainer .card:hover{
+    cursor: pointer;
+}
+.myProjects .cardsContainer .card i{
+    font-size: 100px;
+}
+.myProjects .cardsContainer .card .topPart{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s transform
+}
+.myProjects .cardsContainer .card:hover .topPart{
+    transform: scale(1.10);
+}
+.myProjects .cardsContainer .card .bottomPart{
+
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    background-color: rgba(0,0,255, .2);
+    width: 100%;
+    height: 100px;
+}
+.myProjects .cardsContainer .card::after,
+.myProjects .cardsContainer .card::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    translate: -50% -50%;
+    background-image: conic-gradient(from var(--angle),rgba(0,0,255,.9), rgba(0,0,255,.8),rgba(0,0,255,.7), rgba(0,0,255,.6),rgba(0,0,255,.5),rgba(0,0,255,.6),rgba(0,0,255,.7), rgba(0,0,255,.8), rgba(0,0,255,.9));
+    border-radius: 10px;
+    padding: 1px;
+    z-index: -1;
+}
+.myProjects .cardsContainer .card::before{
+    filter: blur(1.5rem);
+    opacity: 0.2;
+}
+
+
+
